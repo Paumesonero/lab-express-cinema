@@ -10,10 +10,7 @@ const movieSchema = new Schema({
     stars: [String],
     image: String,
     description: String,
-    showTimes: {
-        type: String,
-        enum: ['13:00', '15:30', '18:00', '20:10', '22:40']
-    }
+    showtimes: [String]
 
 
 

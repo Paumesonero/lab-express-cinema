@@ -1,4 +1,20 @@
-<a href="">Go back</a>
-<h3>{{title}}</h3>
-<p>Director: {{director}}</p>
-<p>Stars:</p>
+<div class="details-container">
+    <div>
+        <img src="{{this.image}}" alt="{{this.title}}">
+    </div>
+    <div>
+        <a href="/movies">Go back</a>
+        <h3>{{this.title}}</h3>
+        <h5 id="director-h5">Director: {{this.director}}</h5>
+        <p id="stars-bold">Stars:</p>
+        <ul>
+            {{#each stars}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        <p>{{this.description}}</p>
+        {{#each this.showtimes}}
+        {{this}} |
+        {{/each}}
+    </div>
+</div>
